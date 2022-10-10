@@ -7,7 +7,7 @@ import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { HomeComponent } from './pages/home/home.component';
-import { PerfilUsuarioComponent } from './pages/perfil-usuario/perfil-usuario.component';
+import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -21,7 +21,7 @@ import { Page1Component } from './pages/page1/page1.component';
     FooterComponent,
     SidebarComponent,
     HomeComponent,
-    PerfilUsuarioComponent,
+    UserProfileComponent,
     ContactComponent,
     RegisterComponent,
     LoginComponent,
