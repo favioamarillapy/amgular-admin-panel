@@ -12,10 +12,10 @@ const routes: Routes = [
   { path: '', component: InicioComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'perfil-usuario', component: PerfilUsuarioComponent },
-  { path: 'inicio', component: InicioComponent },
+  { path: 'user-profile', component: PerfilUsuarioComponent },
+  { path: 'home', component: InicioComponent },
   { path: 'page1', component: Page1Component },
-  { path: 'contacto', component: ContactoComponent },
+  { path: 'contact', component: ContactoComponent },
   { path: '**', component: Page404Component }
 ];
 
