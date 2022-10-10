@@ -16,10 +16,10 @@ export class AppComponent {
     this.elementRef.nativeElement.appendChild(s);
   }
 
-  validarRuta() {
+  validateRoute() {
     return this._router.url !== '/register'
       && this._router.url !== '/login'
       && this._router.url !== '/404'
-      && this._router.url !== '/contacto'
+      && this._router.url !== '/contact'
   }
 }

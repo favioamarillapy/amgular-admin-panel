@@ -1,8 +1,8 @@
-<div *ngIf="validarRuta()">
+<div *ngIf="validateRoute()">
   <app-header></app-header>
   <app-sidebar></app-sidebar>
 </div>
 
 <router-outlet></router-outlet>
 
-<app-footer *ngIf="validarRuta()"></app-footer>
+<app-footer *ngIf="validateRoute()"></app-footer>
