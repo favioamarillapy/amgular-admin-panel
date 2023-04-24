@@ -7,16 +7,35 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { UserProfileComponent } from './pages/user-profile/user-profile.component';
 import { Page1Component } from './pages/page1/page1.component';
+import { AppLayoutComponent } from './components/layouts/app-layout/app-layout.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'user-profile', component: UserProfileComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'page1', component: Page1Component },
-  { path: 'contact', component: ContactComponent },
-  { path: '**', component: Page404Component }
+
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+
+  // no layout
+  {
+    path: '',
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'register', component: RegisterComponent }
+    ]
+  },
+
+  // app layout
+  {
+    path: '',
+    component: AppLayoutComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'user-profile', component: UserProfileComponent },
+      { path: 'home', component: HomeComponent },
+      { path: 'page1', component: Page1Component },
+      { path: 'contact', component: ContactComponent }
+    ]
+  },
+
+  { path: '**', component: Page404Component },
 ];
 
 @NgModule({
