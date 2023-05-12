@@ -1,38 +1,50 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { ButtonModule } from 'primeng/button';
+import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { CardModule } from 'primeng/card';
+import { TableModule } from 'primeng/table';
+import { PaginatorModule } from 'primeng/paginator';
+import { PanelMenuModule } from 'primeng/panelmenu';
+import { SidebarModule } from 'primeng/sidebar';
+import { MenubarModule } from 'primeng/menubar';
+import { TieredMenuModule } from 'primeng/tieredmenu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './components/ui/footer/footer.component';
+import { MainLayoutComponent } from './_layouts/main-layout/main-layout.component';
 import { HomeComponent } from './pages/home/home.component';
-import { UserProfileComponent } from './pages/user-profile/user-profile.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { RegisterComponent } from './pages/register/register.component';
+import { UsersComponent } from './pages/users/users.component';
+import { AuthLayoutComponent } from './_layouts/auth-layout/auth-layout.component';
 import { LoginComponent } from './pages/login/login.component';
-import { Page404Component } from './pages/404/404.component';
-import { Page1Component } from './pages/page1/page1.component';
-import { HeaderComponent } from './components/ui/header/header.component';
-import { SidebarComponent } from './components/ui/sidebar/sidebar.component';
-import { AppLayoutComponent } from './components/layouts/app-layout/app-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
-    AppLayoutComponent,
+    MainLayoutComponent,
     HomeComponent,
-    UserProfileComponent,
-    ContactComponent,
-    RegisterComponent,
-    LoginComponent,
-    Page404Component,
-    Page1Component,
+    UsersComponent,
+    AuthLayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    ButtonModule,
+    BreadcrumbModule,
+    CardModule,
+    TableModule,
+    PaginatorModule,
+    PanelMenuModule,
+    SidebarModule,
+    MenubarModule,
+    TieredMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

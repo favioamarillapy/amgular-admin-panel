@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+:root {
+    --primary-color: #5D54A4;
+}
+
+html,
+body,
+input,
+button {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.p-button-icon {
+    color: var(--primary-color);
+}
+
+/* header */
+.p-menubar {
+    background: #fff;
+    border-radius: 0px;
+    border: none;
+}
+
+.p-breadcrumb {
+    background: #F1F5F9;
+    border-radius: 0px;
+    border: none;
+}
+
+/* main */
+.main-content {
+    margin: 10px;
+}
+
+/* header */
+nav {
+    height: 70px !important;
+}
+
+/* sidebar */
+@media only screen and (min-width : 800px) {
+    .sidebar-open {
+        margin-left: 20rem;
+    }
+
+    .sidebar-close {
+        margin-left: 0px;
+    }
+}
+
+.p-sidebar-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    height: 60px !important;
+    padding: 0px 20px !important;
+}
+
+.header-title {
+    margin-left: 20px;
+}
+
+.p-sidebar {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.p-panelmenu {
+    width: auto !important;
+
+    .p-panelmenu-header-link,
+    .p-menuitem-text,
+    .p-menuitem-icon {
+        color: #ffffff !important;
+    }
+
+    .p-panelmenu-header-link,
+    .p-panelmenu-content {
+        background: var(--primary-color) !important;
+        border: none !important;
+        border-radius: 6px !important;
+        padding: 10px 16px !important;
+        font-size: 13px !important;
+    }
+
+    .p-panelmenu-header-link,
+    .p-menuitem-link {
+        &:hover {
+            background: #2C3344 !important;
+        }
+
+        &:focus {
+            box-shadow: none !important;
+        }
+
+        &:focus-visible {
+            box-shadow: none !important;
+        }
+    }
+
+    .p-menuitem-link {
+        background: var(--primary-color) !important;
+        border-radius: 6px !important;
+        padding: 10px 16px !important;
+    }
+}
