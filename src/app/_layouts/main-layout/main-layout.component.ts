@@ -2,14 +2,12 @@ import { Component, HostListener } from '@angular/core';
 
 import { MenuItem } from 'primeng/api';
 
-
 @Component({
   selector: 'app-main-layout',
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.css']
 })
 export class MainLayoutComponent {
-
   sidebarVisible: boolean = true;
   isMobile: boolean = false;
   sidebarOptions: MenuItem[] = [
@@ -32,7 +30,7 @@ export class MainLayoutComponent {
   userOptions: MenuItem[] = [
     {
       label: 'Profile',
-      icon: 'pi pi-fw pi-wrench',
+      icon: 'pi pi-fw pi-wrench'
     },
 
     {
@@ -51,5 +49,4 @@ export class MainLayoutComponent {
     this.isMobile = window.innerWidth < 800;
     this.sidebarVisible = window.innerWidth > 800;
   }
-
 }

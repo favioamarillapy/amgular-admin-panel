@@ -7,8 +7,6 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
   items: MenuItem[] = [];
   home: MenuItem = { icon: 'pi pi-home', routerLink: '/' };
-
 }

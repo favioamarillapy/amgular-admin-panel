@@ -7,7 +7,6 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
-
   items: MenuItem[] = [{ label: 'Users' }];
   home: MenuItem = { icon: 'pi pi-home', routerLink: '/' };
 
@@ -21,27 +20,27 @@ export class UsersComponent {
     {
       id: 1,
       firstName: 'John',
-      lastName: 'Doe',
+      lastName: 'Doe'
     },
     {
       id: 2,
       firstName: 'John',
-      lastName: 'Doe',
+      lastName: 'Doe'
     },
     {
       id: 3,
       firstName: 'John',
-      lastName: 'Doe',
+      lastName: 'Doe'
     },
     {
       id: 4,
       firstName: 'John',
-      lastName: 'Doe',
+      lastName: 'Doe'
     },
     {
       id: 5,
       firstName: 'John',
-      lastName: 'Doe',
+      lastName: 'Doe'
     }
   ];
 

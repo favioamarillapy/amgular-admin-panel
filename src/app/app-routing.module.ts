@@ -7,7 +7,6 @@ import { AuthLayoutComponent } from './_layouts/auth-layout/auth-layout.componen
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-
   {
     path: '',
     component: MainLayoutComponent,
@@ -20,15 +19,12 @@ const routes: Routes = [
   {
     path: '',
     component: AuthLayoutComponent,
-    children: [
-      { path: 'login', component: LoginComponent }
-    ]
+    children: [{ path: 'login', component: LoginComponent }]
   }
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
