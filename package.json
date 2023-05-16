@@ -1,6 +1,11 @@
 {
   "name": "angular-admin-panel",
   "version": "0.0.0",
+  "author": {
+    "name": "Favio Amarilla Miño",
+    "email": "amarillafavio@gmail.com",
+    "url": "https://github.com/favioamarillapy"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
