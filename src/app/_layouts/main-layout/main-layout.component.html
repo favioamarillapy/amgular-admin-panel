@@ -1,56 +1,63 @@
-<aside class="card flex justify-content-center">
+<aside class="flex justify-content-center">
   <p-sidebar
     [(visible)]="sidebarVisible"
     [modal]="false"
-    [showCloseIcon]="false">
+    [showCloseIcon]="false"
+  >
     <ng-template pTemplate="header">
-      <h3 class="header-title">Admin Template</h3>
-      <p-button
+      <h3 class="header-title text-white">
+        Admin Template
+        <hr />
+      </h3>
+      <button
+        pButton
+        type="button"
+        class="p-button-text"
         *ngIf="isMobile"
-        styleClass="p-button-text"
-        (click)="sidebarVisible = !sidebarVisible">
-        <i style="color: #fff" class="pi pi-times"></i>
-      </p-button>
+        (click)="sidebarVisible = !sidebarVisible"
+      >
+        <i class="pi pi-times text-white"></i>
+      </button>
     </ng-template>
-    <hr />
     <ng-template pTemplate="content">
-      <div class="card flex justify-content-center">
+      <div class="flex justify-content-center">
+        <br />
         <p-panelMenu
           [model]="sidebarOptions"
-          [style]="{ width: '300px' }"></p-panelMenu>
+          [style]="{ width: '300px' }"
+        ></p-panelMenu>
       </div>
     </ng-template>
-    <ng-template pTemplate="footer">Footer Content</ng-template>
+    <!-- <ng-template pTemplate="footer">Footer Content</ng-template> -->
   </p-sidebar>
 </aside>
 
 <div [ngClass]="sidebarVisible ? 'sidebar-open' : 'sidebar-close'">
-  <nav>
-    <div class="card">
-      <p-menubar [model]="[]">
-        <ng-template pTemplate="start">
-          <p-button
-            styleClass="p-button-text"
-            (click)="sidebarVisible = !sidebarVisible"
-            icon="pi pi-align-justify"></p-button>
-        </ng-template>
-        <ng-template pTemplate="end">
-          <p-button
-            type="button"
-            icon="pi pi-bars"
-            styleClass="p-button-text"
-            (click)="menu.toggle($event)">
-            Username
-            <span class="pi pi-angle-down"></span>
-          </p-button>
-          <p-tieredMenu
-            #menu
-            [model]="userOptions"
-            [popup]="true"></p-tieredMenu>
-        </ng-template>
-      </p-menubar>
-    </div>
-  </nav>
+  <p-menubar [model]="[]">
+    <ng-template pTemplate="start">
+      <button
+        pButton
+        type="button"
+        class="p-button-text"
+        (click)="sidebarVisible = !sidebarVisible"
+      >
+        <i style="color: var(--primary-color)" class="pi pi-align-justify"></i>
+      </button>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <button
+        pButton
+        type="button"
+        class="p-button-text"
+        (click)="menu.toggle($event)"
+      >
+        <span style="color: var(--primary-color)">Username Lastaname</span>
+        <i style="color: var(--primary-color)" class="pi pi-angle-down"></i>
+      </button>
+      <p-tieredMenu #menu [model]="userOptions" [popup]="true"></p-tieredMenu>
+    </ng-template>
+  </p-menubar>
+
   <main>
     <router-outlet></router-outlet>
   </main>
